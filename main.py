@@ -1,12 +1,19 @@
 import time
 
-ANTIMONY = {"who am i?": AY, "status": AYstatus, "stats": AYstats}
 AY = "You are the daughter of the Headmaster. You are in danger. They want to find you."
 AYstatus = "You are scared. What is happening?"
-AYstats = {"health": AYHP + "/10","energy": AYEP + "/10"}
-BACKPACK = {"fruit snacks":fruit_snacks, "crackers": crackers, "Thimble": thimble, "pajamas": pjs, "mittens": mittens, "hat":hat, "toothbrush":toothbrush}
-fruit_snacks = dir(description: "Delicious, gummy fruit snacks. Your mother disapproves of these but they fill you up well. \n (Restores 3 HP, Restore 2 EP)\n", quantity: 3)
-crackers = {description: "Whole wheat crackers with nuts that are pretty bland...\n (Restores 5 HP, Restores 5 EP)", quantity: 1}
+hp = 10
+ep = 10
+AYHP = str(hp)
+AYEP = str(ep)
+AYstats = {"health": (AYHP + "/10"),"energy": (AYEP + "/10")}
+ANTIMONY = {"who am i?": AY, "status": AYstatus, "stats": AYstats}
+fruit_snacks = {"description": "Delicious, gummy fruit snacks. Your mother disapproves of these but they fill you up well. \n (Restores 3 HP, Restore 2 EP)\n", "quantity": 3}
+crackers = {"description": "Whole wheat crackers with nuts that are pretty bland...\n (Restores 5 HP, Restores 5 EP)", "quantity": 1}
+thimble = {"description": "Thimble is your best stuffed bear friend and is very large. Sometimes you use him as a pillow.", "quantity":1}
+mittens = {"description":"large, leather mittens ready to protect your hands from the sharp, hot, and cold", "quantity": 1}
+BACKPACK = {"fruit snacks":fruit_snacks, "crackers": crackers, "Thimble": thimble,"mittens": mittens}
+
 
 the_beginning = ['''Your mother and you are sitting in the back seat of a limousine. You have been flying in an airplane from California for over 5 hours.''',
 "Coming from the airport to visit your father, the limousine is approaching the academy your father is principal of",
@@ -57,7 +64,8 @@ if ready == "yes":
             fire = input("Do you say something about the smoke? (Yes/No)").lower()
             if fire == "yes":
                 print("It was too late. Your mother looks up. A firey force slams into the limousine and drives the top of the hood to the ground.")
-                print(" ")
+
+                print("")
 time.sleep(4)
 ask1 = input("Continue?")
 if ask1 == "yes":
