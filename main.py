@@ -36,13 +36,13 @@ def death():
 print('Season: Summer \nMonth: June \nWho are you: Antimony A. \nHow old Are you: 4 years old\n')
 
 time.sleep(4)
-ready = input("Ready?").lower()
+ready = input("Ready? (Type 'yes' or 'no')   ").lower()
 fire_list = ["You turn to your mother and tell her of the fire.", "The smoke starts to thicken.", "It grows.", "Your mother stops talking on the phone and looks up to see the dark cloud forming."]
 
 if ready == "no":
     death()
 
-if ready == "yes":
+if ready != "no":
     x = 0
     y = 0
     while y <= 5:
@@ -50,7 +50,7 @@ if ready == "yes":
         time.sleep(4)
         y = y+ 1
     print(the_crisis)
-    fire = input("Do you say something about the smoke? (Yes/No)").lower()
+    fire = input("Do you say something about the smoke? (Yes/No)   ").lower()
     if fire == "yes":
         print(fire_list[x])
         time.sleep(4)
@@ -61,11 +61,11 @@ if ready == "yes":
             break
         else:
             print(fire_list[x])
-            fire = input("Do you say something about the smoke? (Yes/No)").lower()
+            fire = input("Do you say something about the smoke? (Yes/No)   ").lower()
             if fire == "yes" or "no":
                 print("It's too late. Your mother looks up. A firey force slams into the limousine and drives the top of the hood to the ground.")
 time.sleep(4)
-ask1 = input("Continue?")
+ask1 = input("Continue (Yes or No)?   ")
 if ask1 == "yes":
     x = 0
     while x <= 2:
@@ -78,10 +78,10 @@ if ask1 == "yes":
 if ask1 == "no":
     death()
 
-ask2 = input("What would you like to do?").lower()
+ask2 = input("What would you like to do? (Hint: can you see anything?)   ").lower()
 if ask2 == "observe" or "look around" or "search the car" or "search" or "look":
     print("You see a lot of glass on the ceiling of the car. You know you're going to cut yourself. Your backpack is on the floor within arm's reach.")
-    ask3 = input("What would you like to do?").lower()
+    ask3 = input("What would you like to do? (Hint: Interact with your surroundings.)   ").lower()
     if ask3 == "get backpack" or "backpack" or "grab backpack" or "pick up backpack":
         print("You have picked up your BACKPACK! A tad ratty, pink, and reliable backpack of yours. It holds all you prepared to spend the weekend with your father!")
 if ask2 == "unclip seatbelt" or "take off seatbelt" or "seatbelt" or "get out":
