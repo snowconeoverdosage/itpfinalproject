@@ -1,5 +1,6 @@
 import time
 
+fire_game = ["The fire at the front of the car burns.", "The fire crawls over to the window", "You hear a clicking noise. THE LIMOUSINE EXPLODES."]
 AY = "You are the daughter of the Headmaster. You are in danger. They want to find you."
 AYstatus = "You are scared. What is happening?"
 hp = 10
@@ -75,6 +76,7 @@ if ask1 == "yes":
     print("You find your body hanging onto the safety of your seatbelt. The car is turned over, so you are hanging upside down in the ruins of the car. Your mother is unconcious.")
     time.sleep(2)
     print("You smell gas and a fire is dangerously close to the front of the totaled car...")
+
 if ask1 == "no":
     death()
 
@@ -82,8 +84,12 @@ ask2 = input("What would you like to do? (Hint: can you see anything?)   ").lowe
 if ask2 == "observe" or "look around" or "search the car" or "search" or "look":
     print("You see a lot of glass on the ceiling of the car. You know you're going to cut yourself. Your backpack is on the floor within arm's reach.")
     ask3 = input("What would you like to do? (Hint: Interact with your surroundings.)   ").lower()
+    while ask3 != "get backpack" or "backpack" or "grab backpack" or "pick up backpack":
+       
+        
     if ask3 == "get backpack" or "backpack" or "grab backpack" or "pick up backpack":
-        print("You have picked up your BACKPACK! A tad ratty, pink, and reliable backpack of yours. It holds all you prepared to spend the weekend with your father!")
+       print("You have picked up your BACKPACK! A tad ratty, pink, and reliable backpack of yours. It holds all you prepared to spend the weekend with your father!")
+        
 if ask2 == "unclip seatbelt" or "take off seatbelt" or "seatbelt" or "get out":
     print("You unclip the seatbelt and you fall unprotected into the broken glass. You find your wrist has been slit.")
     time.sleep(2)
@@ -93,17 +99,4 @@ if ask2 == "unclip seatbelt" or "take off seatbelt" or "seatbelt" or "get out":
     time.sleep(1)
     print("You collapse onto the ground.")
     death()
-
-
-
-
-
-
-
-
-
-
-
-
-
 
