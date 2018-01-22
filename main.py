@@ -83,14 +83,7 @@ if ask1 == "no":
 ask2 = input("What would you like to do? (Hint: can you see anything?)   ").lower()
 if ask2 == "observe" or "look around" or "search the car" or "search" or "look":
     print("You see a lot of glass on the ceiling of the car. You know you're going to cut yourself. Your backpack is on the floor within arm's reach.")
-    ask3 = input("What would you like to do? (Hint: Interact with your surroundings.)   ").lower()
-    while ask3 != "get backpack" or "backpack" or "grab backpack" or "pick up backpack":
-       
-        
-    if ask3 == "get backpack" or "backpack" or "grab backpack" or "pick up backpack":
-       print("You have picked up your BACKPACK! A tad ratty, pink, and reliable backpack of yours. It holds all you prepared to spend the weekend with your father!")
-        
-if ask2 == "unclip seatbelt" or "take off seatbelt" or "seatbelt" or "get out":
+else:
     print("You unclip the seatbelt and you fall unprotected into the broken glass. You find your wrist has been slit.")
     time.sleep(2)
     print("You vision begins to fade. You heart beat quickens. You begin to bleed.")
@@ -99,4 +92,13 @@ if ask2 == "unclip seatbelt" or "take off seatbelt" or "seatbelt" or "get out":
     time.sleep(1)
     print("You collapse onto the ground.")
     death()
+ask3 = input("What would you like to do? (Hint: Interact with your surroundings.)   ").lower()
+if ask3 == "get backpack" or "backpack" or "grab backpack" or "pick up backpack":
+    print("You have picked up your BACKPACK! A tad ratty, pink, and reliable backpack of yours. It holds all you prepared to spend the weekend with your father!")
+    ask4 = input("Open backpack? (yes/no)").lower()
+    if ask4 == "yes":
+        print("You have" + BACKPACK[0] + BACKPACK[1] + BACKPACK[2] + BACKPACK[3] + ".")
+    if ask4 == "no":
+        print(fire_game[1])
+
 
